@@ -1,0 +1,1058 @@
+<!DOCTYPE html><html><head>
+      <title>Apuntes Digitalización Unidad 3</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="apuntes">Apuntes </h1>
+<p><a href="./u3.pdf">Descargar estos apuntes</a></p>
+<h2 id="índice">Índice </h2>
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#contenidos" class="md-toc-link">
+            <p>Contenidos</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#introducción" class="md-toc-link">
+            <p>Introducción</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#contexto-de-la-computación-en-la-nube" class="md-toc-link"><p>Contexto de la Computación en la Nube</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#orígenes" class="md-toc-link">
+            <p>Orígenes</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#evolución-de-la-computación-en-la-nube" class="md-toc-link">
+            <p>Evolución de la Computación en la Nube</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#cronología-resumida" class="md-toc-link">
+            <p>Cronología resumida</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#computación-en-la-nube-beneficios-e-incovenientes" class="md-toc-link"><p>Computación en la Nube, beneficios e incovenientes</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#beneficios-de-la-computación-en-la-nube" class="md-toc-link">
+            <p>Beneficios de la Computación en la Nube</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#inconvenientes-de-la-computación-en-la-nube" class="md-toc-link">
+            <p>Inconvenientes de la Computación en la Nube</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#modelos-de-implementación-de-la-nube" class="md-toc-link"><p>Modelos de Implementación de la Nube</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#nube-pública" class="md-toc-link"><p>Nube Pública</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#proveedores-principales" class="md-toc-link">
+            <p>Proveedores principales</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#nube-privada" class="md-toc-link"><p>Nube Privada</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características-1" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#limitaciones" class="md-toc-link">
+            <p>Limitaciones</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#proveedores-principales-1" class="md-toc-link">
+            <p>Proveedores principales</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#nube-híbrida" class="md-toc-link"><p>Nube Híbrida</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características-2" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#proveedores-principales-2" class="md-toc-link">
+            <p>Proveedores principales</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#multinube" class="md-toc-link">
+            <p>Multinube</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#características-3" class="md-toc-link"><p>Características</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#proveedores-principales-3" class="md-toc-link">
+            <p>Proveedores principales</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#modelos-o-niveles-de-servicio-en-la-nube" class="md-toc-link"><p>Modelos o niveles de Servicio en la Nube</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#infraestructura-como-servicio-iaas" class="md-toc-link"><p>Infraestructura como Servicio (IaaS)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características-4" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#limitaciones-1" class="md-toc-link">
+            <p>Limitaciones</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#plataforma-como-servicio-paas" class="md-toc-link"><p>Plataforma como Servicio (PaaS)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características-5" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#limitaciones-2" class="md-toc-link">
+            <p>Limitaciones</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#software-como-servicio-saas" class="md-toc-link"><p>Software como Servicio (SaaS)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características-6" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#limitaciones-3" class="md-toc-link">
+            <p>Limitaciones</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#clasificación" class="md-toc-link">
+            <p>Clasificación</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#todo-como-servicio-xaas" class="md-toc-link"><p>Todo como Servicio (XaaS)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características-7" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#desafíos" class="md-toc-link">
+            <p>Desafíos</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#relación-entre-los-modelos-de-servicio" class="md-toc-link"><p>Relación entre los modelos de servicio</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#descripción-de-la-relación" class="md-toc-link">
+            <p>Descripción de la relación</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#relación-general" class="md-toc-link">
+            <p>Relación General</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#responsabilidad-de-gestión-de-recursos-en-la-nube" class="md-toc-link"><p>Responsabilidad de Gestión de Recursos en la Nube</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#características-8" class="md-toc-link">
+            <p>Características</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#limitaciones-4" class="md-toc-link">
+            <p>Limitaciones</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#comparativa-con-la-nube" class="md-toc-link">
+            <p>Comparativa con la Nube</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#uso-de-los-diferentes-modelos-de-nube" class="md-toc-link"><p>Uso de los Diferentes Modelos de Nube</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#aplicaciones-de-los-modelos-de-nube" class="md-toc-link"><p>Aplicaciones de los Modelos de Nube</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#infraestructura-como-servicio-iaas-1" class="md-toc-link">
+            <p>Infraestructura como Servicio (IaaS)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#plataforma-como-servicio-paas-1" class="md-toc-link">
+            <p>Plataforma como Servicio (PaaS)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#software-como-servicio-saas-1" class="md-toc-link">
+            <p>Software como Servicio (SaaS)</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#modelos-de-computación-complementarios-a-la-nube-tradicional" class="md-toc-link"><p>Modelos de Computación Complementarios a la Nube Tradicional</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#modelos-existentes" class="md-toc-link"><p>Modelos existentes</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#edge-computing" class="md-toc-link">
+            <p>Edge Computing</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#fog-computing" class="md-toc-link">
+            <p>Fog Computing</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#mist-computing" class="md-toc-link">
+            <p>Mist Computing</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#comparativa-de-modelos" class="md-toc-link">
+            <p>Comparativa de Modelos</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#impacto-de-la-computación-en-la-nube-en-la-rentabilidad-empresarial" class="md-toc-link"><p>Impacto de la Computación en la Nube en la Rentabilidad Empresarial</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#impacto-financiero-de-la-computación-en-la-nube" class="md-toc-link">
+            <p>Impacto Financiero de la Computación en la Nube</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#ideas-clave" class="md-toc-link">
+            <p>Ideas Clave</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#conclusiones" class="md-toc-link">
+            <p>Conclusiones</p>
+
+          </a></div>
+</div>
+<div style="page-break-after:always;"></div>
+<h2 id="contenidos">Contenidos </h2>
+<h2 id="introducción">Introducción </h2>
+<p>En este tema nos centraremos en los conceptos claves y las tecnologías de computación en la nube. El objetivo principal del tema no es la profundización técnica en la implementación de estas tecnologías, sino comprender su finalidad y cómo pueden utilizarse para impulsar la transformación digital en diversos sectores productivos. Se abordará el concepto de nube, se explorará su historia, sus diferentes modelos de implementación (pública, privada, híbrida, multinube), los modelos de servicio (IaaS, PaaS, SaaS, XaaS) y su impacto en la rentabilidad empresarial. Finalmente, introduce modelos de computación complementarios como Edge Computing, Fog Computing y Mist Computing.</p>
+<h2 id="contexto-de-la-computación-en-la-nube">Contexto de la Computación en la Nube </h2>
+<h3 id="orígenes">Orígenes </h3>
+<p>La computación en la nube tiene sus orígenes en los años 50 con los <em>mainframes</em> y el procesamiento en tiempo compartido, donde grandes computadoras centrales permitían el acceso simultáneo e independiente a varios usuarios. Desde entonces la irrupción de diferentes tecnologías nos ha conducido hasta la nube actual.<br>
+Hoy en día, la computación en la nube es esencial para la transformación digital.</p>
+<blockquote>
+<p>📌 Los <strong>mainframes</strong> son grandes computadoras centrales diseñadas para procesar enormes volúmenes de datos y ejecutar múltiples tareas de manera simultánea. Proporcionaban un entorno centralizado que permitía a varios usuarios acceder de manera simultánea e independiente.</p>
+</blockquote>
+<h3 id="evolución-de-la-computación-en-la-nube">Evolución de la Computación en la Nube </h3>
+<ol>
+<li>
+<p><strong>Años 50: Mainframes y Procesamiento en Tiempo Compartido</strong></p>
+<ul>
+<li>Los mainframes permitían a múltiples usuarios acceder simultáneamente a una única computadora central.</li>
+<li>Introducción del concepto de <strong>procesamiento en tiempo compartido</strong>, que sentó las bases para la virtualización y el uso compartido de recursos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Años 70: Virtualización</strong></p>
+<ul>
+<li>La virtualización permitió dividir los recursos físicos en múltiples entornos virtuales.</li>
+<li>Empresas como IBM lideraron el desarrollo de tecnologías de virtualización, fundamentales para la computación en la nube.</li>
+</ul>
+</li>
+<li>
+<p><strong>Años 80: Redes y Conectividad</strong></p>
+<ul>
+<li>La expansión de las redes y la conectividad global (como ARPANET, precursor de internet) facilitó el acceso remoto a recursos compartidos.</li>
+<li>Se popularizó el concepto de cliente-servidor, que permitió a los usuarios interactuar con servidores remotos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Años 90: Computación Distribuida</strong></p>
+<ul>
+<li>La computación distribuida y el surgimiento de internet comercial impulsaron la idea de servicios accesibles desde cualquier lugar.</li>
+<li>Empresas como Salesforce (1999) introdujeron el modelo de <strong>Software como Servicio (SaaS)</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>2000-2006: Nacimiento de la Nube Moderna</strong></p>
+<ul>
+<li>En 2006, <strong>Amazon Web Services (AWS)</strong> lanzó servicios como EC2 y S3, marcando el inicio de la computación en la nube moderna.</li>
+<li>Se consolidaron los modelos de servicio: <strong>IaaS, PaaS y SaaS</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>2010 en adelante: Expansión y Diversificación</strong></p>
+<ul>
+<li><strong>Microsoft Azure</strong> (2010) y <strong>Google Cloud Platform</strong> (2011) ampliaron las opciones de servicios en la nube.</li>
+<li>Surgieron modelos híbridos y multinube, así como tecnologías complementarias como <strong>Edge Computing</strong>, <strong>Fog Computing</strong> y <strong>Mist Computing</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><img src="./.img/3.1.png" alt="Img 3.1" width="100%" height="100%"></p>
+<h3 id="cronología-resumida">Cronología resumida </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Año</th>
+<th style="text-align:left">Hito Principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1950s</td>
+<td style="text-align:left">Mainframes y procesamiento en tiempo compartido.</td>
+</tr>
+<tr>
+<td style="text-align:left">1970s</td>
+<td style="text-align:left">Virtualización y avances en hardware.</td>
+</tr>
+<tr>
+<td style="text-align:left">1980s</td>
+<td style="text-align:left">Redes globales y modelo cliente-servidor.</td>
+</tr>
+<tr>
+<td style="text-align:left">1990s</td>
+<td style="text-align:left">SaaS y computación distribuida.</td>
+</tr>
+<tr>
+<td style="text-align:left">2006</td>
+<td style="text-align:left">Lanzamiento de AWS, inicio de la nube moderna.</td>
+</tr>
+<tr>
+<td style="text-align:left">2010-2011</td>
+<td style="text-align:left">Aparición de Microsoft Azure y Google Cloud.</td>
+</tr>
+<tr>
+<td style="text-align:left">Actualidad</td>
+<td style="text-align:left">Modelos híbridos, multinube, Edge, Fog y Mist Computing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="computación-en-la-nube-beneficios-e-incovenientes">Computación en la Nube, beneficios e incovenientes </h2>
+<p>La computación en la nube o <strong>Cloud Computing</strong> consiste en ofrecer servicios de hardware y software a través de internet, eliminando la necesidad de poseer o gestionar infraestructura física propia. En esencia, permite a los usuarios acceder a recursos tecnológicos de manera remota, utilizando internet como medio principal. El término <em>nube</em> se utiliza para representar la disponibilidad de estos recursos desde cualquier lugar con conexión.</p>
+<p><img src="./.img/3.2.png" alt="Img 3.2" width="100%" height="100%"></p>
+<h3 id="beneficios-de-la-computación-en-la-nube">Beneficios de la Computación en la Nube </h3>
+<p>La siguiente tabla describe los principales beneficios o ventajas de la computación en la nube.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Beneficios</strong></th>
+<th style="text-align:left"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Acceso remoto</strong></td>
+<td style="text-align:left">Permite trabajar desde cualquier lugar con conexión a internet.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Reducción de costes</strong></td>
+<td style="text-align:left">Elimina la necesidad de grandes inversiones iniciales en infraestructura física.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Escalabilidad</strong></td>
+<td style="text-align:left">Los recursos pueden ajustarse dinámicamente según las necesidades.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Modelo de pago por uso</strong></td>
+<td style="text-align:left">Los usuarios solo pagan por los recursos que consumen.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mantenimiento simplificado</strong></td>
+<td style="text-align:left">Los proveedores de nube se encargan de actualizaciones y soporte técnico.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Sostenibilidad</strong></td>
+<td style="text-align:left">Facilita modelos de negocio más ecológicos y eficientes.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Innovación</strong></td>
+<td style="text-align:left">Libera a las empresas de tareas operativas, permitiéndoles centrarse en su actividad principal.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inconvenientes-de-la-computación-en-la-nube">Inconvenientes de la Computación en la Nube </h3>
+<p>La siguiente tabla describe las principales desventajas o inconvenientes de la computación en la nube.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Inconvenientes</strong></th>
+<th style="text-align:left"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Dependencia de internet</strong></td>
+<td style="text-align:left">Requiere una conexión estable para acceder a los servicios.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Privacidad y seguridad</strong></td>
+<td style="text-align:left">Los datos sensibles pueden estar expuestos a riesgos si no se gestionan adecuadamente.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Costes variables</strong></td>
+<td style="text-align:left">Los costes pueden ser difíciles de prever debido al modelo de pago por uso.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Dependencia del proveedor</strong></td>
+<td style="text-align:left">Cambiar de proveedor puede ser complejo y costoso.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Limitaciones de personalización</strong></td>
+<td style="text-align:left">Algunos servicios no permiten adaptaciones específicas a las necesidades del cliente.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Latencia</strong></td>
+<td style="text-align:left">Puede haber retrasos en el acceso a datos o servicios en ciertas ubicaciones.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modelos-de-implementación-de-la-nube">Modelos de Implementación de la Nube </h2>
+<p>Los modelos de implementación en la nube definen cómo se estructuran y gestionan los recursos tecnológicos en función de las necesidades de las organizaciones. Cada modelo ofrece diferentes niveles de control, flexibilidad y seguridad, permitiendo a las empresas elegir la opción que mejor se adapte a sus objetivos estratégicos y operativos. A continuación, se describen los principales modelos de implementación, destacando sus características, ventajas y casos de uso.</p>
+<p><img src="./.img/3.3.png" alt="Img 3.3" width="100%" height="100%"></p>
+<h3 id="nube-pública">Nube Pública </h3>
+<p>La nube pública es un modelo de implementación en el que los recursos tecnológicos, como servidores, almacenamiento y aplicaciones, son gestionados por un proveedor externo y compartidos entre múltiples usuarios a través de internet.</p>
+<h4 id="características">Características </h4>
+<ul>
+<li><strong>Acceso desde cualquier ubicación</strong>: Los usuarios pueden acceder a los recursos desde cualquier lugar con conexión a internet.</li>
+<li><strong>Despliegue rápido</strong>: Los servicios están disponibles de forma inmediata, sin necesidad de configurar infraestructura física.</li>
+<li><strong>Alta escalabilidad</strong>: Los recursos pueden ajustarse dinámicamente según las necesidades.</li>
+<li><strong>Modelo de pago por uso</strong>: Los usuarios solo pagan por los recursos que consumen.</li>
+<li><strong>Optimización de costes</strong>: No requiere inversión inicial en infraestructura.</li>
+<li><strong>Mantenimiento y actualizaciones</strong>: A cargo del proveedor.</li>
+</ul>
+<h4 id="proveedores-principales">Proveedores principales </h4>
+<ul>
+<li><strong>Amazon Web Services (AWS)</strong></li>
+<li><strong>Microsoft Azure</strong></li>
+<li><strong>Google Cloud Platform</strong></li>
+</ul>
+<p><img src="./.img/3.4.png" alt="Img 3.4" width="100%" height="100%"></p>
+<h3 id="nube-privada">Nube Privada </h3>
+<p>La nube privada es un modelo en el que la infraestructura está dedicada exclusivamente a una única organización, proporcionando mayor control y personalización.</p>
+<h4 id="características-1">Características </h4>
+<ul>
+<li><strong>Control total</strong>: La organización tiene control completo sobre la gestión de los recursos.</li>
+<li><strong>Cumplimiento normativo</strong>: Ideal para sectores con requisitos estrictos de seguridad y normativas.</li>
+<li><strong>Personalización</strong>: Permite adaptar la infraestructura a necesidades específicas.</li>
+</ul>
+<h4 id="limitaciones">Limitaciones </h4>
+<ul>
+<li><strong>Costes elevados</strong>: La organización asume la responsabilidad financiera de la adquisición, mantenimiento y personal.</li>
+<li><strong>Gestión compleja</strong>: Requiere personal especializado para su administración.</li>
+</ul>
+<h4 id="proveedores-principales-1">Proveedores principales </h4>
+<ul>
+<li><strong>VMware</strong></li>
+<li><strong>OpenStack</strong></li>
+</ul>
+<p><img src="./.img/3.5.png" alt="Img 3.5" width="100%" height="100%"></p>
+<h3 id="nube-híbrida">Nube Híbrida </h3>
+<p>La nube híbrida combina recursos de nubes públicas y privadas, permitiendo la transferencia de datos y aplicaciones entre ellas.</p>
+<h4 id="características-2">Características </h4>
+<ul>
+<li><strong>Flexibilidad</strong>: Permite mantener información sensible en la nube privada y aprovechar la escalabilidad de la nube pública.</li>
+<li><strong>Carga de trabajo equilibrada</strong>: Optimiza el uso de recursos según las necesidades.</li>
+<li><strong>Costes optimizados</strong>: Combina los beneficios de ambos modelos.</li>
+</ul>
+<h4 id="proveedores-principales-2">Proveedores principales </h4>
+<ul>
+<li><strong>Microsoft Azure</strong></li>
+<li><strong>Amazon Web Services (AWS)</strong></li>
+</ul>
+<p><img src="./.img/3.6.png" alt="Img 3.6" width="100%" height="100%"></p>
+<h3 id="multinube">Multinube </h3>
+<p>La multinube utiliza servicios de diferentes proveedores, ya sean públicos o privados, para evitar la dependencia de un único proveedor.</p>
+<h3 id="características-3">Características </h3>
+<ul>
+<li><strong>Diversidad de servicios</strong>: Permite seleccionar servicios específicos según las necesidades.</li>
+<li><strong>Reducción de riesgos</strong>: Minimiza la dependencia de un único proveedor.</li>
+<li><strong>Optimización de costes</strong>: Aprovecha las fortalezas de diferentes proveedores.</li>
+</ul>
+<h4 id="proveedores-principales-3">Proveedores principales </h4>
+<ul>
+<li><strong>AWS</strong></li>
+<li><strong>Google Cloud Platform</strong></li>
+<li><strong>Microsoft Azure</strong></li>
+</ul>
+<p><img src="./.img/3.7.png" alt="Img 3.7" width="100%" height="100%"></p>
+<h2 id="modelos-o-niveles-de-servicio-en-la-nube">Modelos o niveles de Servicio en la Nube </h2>
+<p>Definen la relación entre proveedores y usuarios, así como la gestión de recursos y responsabilidades. A continuación se describen los diferentes modelos. Tradicionalmente se han considerado tres niveles de servicio en la nube: Infraestructura como Servicio (IaaS), Plataforma como Servicio (PaaS) y Software como Servicio (SaaA). Actualmente también se considera el nivel Todo como Servicio (XaaS) que es una evolución de los otros tres.</p>
+<h3 id="infraestructura-como-servicio-iaas">Infraestructura como Servicio (IaaS) </h3>
+<p>El proveedor gestiona la infraestructura (servidores, almacenamiento, redes, virtualización), mientras que el usuario gestiona el sistema operativo, software y datos.</p>
+<h4 id="características-4">Características </h4>
+<ul>
+<li>Virtualización de recursos.</li>
+<li>Escalabilidad dinámica.</li>
+<li>Control total sobre el sistema operativo y aplicaciones.</li>
+<li>Modelo de pago por uso.</li>
+</ul>
+<p><img src="./.img/3.8.png" alt="Img 3.8" width="100%" height="100%"></p>
+<h4 id="limitaciones-1">Limitaciones </h4>
+<ul>
+<li>Gestión compleja.</li>
+<li>Escalabilidad no completamente automática.</li>
+<li>Coste variable dificulta la planificación financiera.</li>
+</ul>
+<h3 id="plataforma-como-servicio-paas">Plataforma como Servicio (PaaS) </h3>
+<p>El proveedor gestiona la infraestructura, el sistema operativo y el software intermedio, dejando al usuario la gestión de aplicaciones y datos. Es especialmente indicado para el desarrollo de aplicaciones.</p>
+<h4 id="características-5">Características </h4>
+<ul>
+<li>Entorno de desarrollo completo (lenguajes, bases de datos).</li>
+<li>Automatización del despliegue.</li>
+<li>Escalabilidad automática.</li>
+<li>Gestión simplificada de recursos.</li>
+</ul>
+<p><img src="./.img/3.9.png" alt="Img 3.9" width="100%" height="100%"></p>
+<h4 id="limitaciones-2">Limitaciones </h4>
+<ul>
+<li>Personalización de infraestructura reducida.</li>
+<li>Dependencia del proveedor.</li>
+</ul>
+<h3 id="software-como-servicio-saas">Software como Servicio (SaaS) </h3>
+<p>El proveedor gestiona todas las capas (infraestructura, plataforma, aplicaciones), y el usuario accede a las aplicaciones a través de internet.</p>
+<h4 id="características-6">Características </h4>
+<ul>
+<li>Acceso remoto.</li>
+<li>Gestión centralizada por el proveedor (mantenimiento, actualizaciones, seguridad).</li>
+<li>Modelo de pago por suscripción.</li>
+<li>Escalabilidad.</li>
+</ul>
+<p><img src="./.img/3.10.png" alt="Img 3.10" width="100%" height="100%"></p>
+<h4 id="limitaciones-3">Limitaciones </h4>
+<ul>
+<li>Personalización limitada.</li>
+<li>Dependencia del proveedor.</li>
+<li>Posibles preocupaciones sobre la privacidad de datos sensibles.</li>
+</ul>
+<h4 id="clasificación">Clasificación </h4>
+<ul>
+<li>
+<p><strong>Por tipo de cliente</strong>:</p>
+<ul>
+<li>SaaS B2B (para empresas).</li>
+<li>SaaS B2C (para consumidores).</li>
+</ul>
+<p><img src="./.img/3.11.png" alt="Img 3.11" width="100%" height="100%"></p>
+</li>
+<li>
+<p><strong>Por diseño</strong>:</p>
+<ul>
+<li>SaaS Horizontal: Genérico, adaptable a múltiples sectores (ej., Microsoft 365, Google Workspace).</li>
+<li>SaaS Vertical: Para nichos de mercado específicos (ej., Viva Assistance para sanidad).</li>
+</ul>
+<p><img src="./.img/3.12.png" alt="Img 3.12" width="100%" height="100%"></p>
+</li>
+</ul>
+<h3 id="todo-como-servicio-xaas">Todo como Servicio (XaaS) </h3>
+<p>Engloba una amplia variedad de soluciones ofrecidas a través de internet, representando la evolución de SaaS, PaaS e IaaS.</p>
+<h4 id="características-7">Características </h4>
+<ul>
+<li>Flexibilidad.</li>
+<li>Escalabilidad.</li>
+<li>Eficiencia de costes (sin grandes inversiones iniciales).</li>
+<li>Acceso remoto.</li>
+</ul>
+<p><img src="./.img/3.13.png" alt="Img 3.13" width="100%" height="100%"></p>
+<h4 id="desafíos">Desafíos </h4>
+<ul>
+<li>Dependencia de la conexión a internet.</li>
+<li>Elección de proveedores de confianza.</li>
+<li>Gestión de múltiples proveedores.</li>
+</ul>
+<h3 id="relación-entre-los-modelos-de-servicio">Relación entre los modelos de servicio </h3>
+<p>Los niveles de servicio del Cloud Computing están organizados de manera jerárquica, donde cada nivel depende del anterior para funcionar, y juntos forman un ecosistema completo que permite a las empresas elegir el nivel de servicio que mejor se adapte a sus necesidades.<br>
+Esta relación entre los diferentes niveles puede describirse como una jerarquía interdependiente, donde cada nivel se construye sobre el anterior y ofrece un mayor nivel de abstracción para el usuario. A continuación, se detalla esta relación:</p>
+<h4 id="descripción-de-la-relación">Descripción de la relación </h4>
+<ol>
+<li>
+<p><strong>Infraestructura como Servicio (IaaS) - La base</strong></p>
+<ul>
+<li><strong>Función</strong>: Proporciona los cimientos tecnológicos, como servidores, almacenamiento, redes y virtualización.</li>
+<li><strong>Relación con los otros niveles</strong>:
+<ul>
+<li>Es el nivel más bajo y esencial, ya que tanto PaaS como SaaS dependen de la infraestructura proporcionada por IaaS.</li>
+<li>Sin IaaS, no sería posible construir plataformas ni ofrecer aplicaciones.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Plataforma como Servicio (PaaS) - Nivel intermedio</strong></p>
+<ul>
+<li><strong>Función</strong>: Proporciona un entorno para desarrollar, probar y desplegar aplicaciones, incluyendo herramientas de desarrollo, bases de datos y middleware.</li>
+<li><strong>Relación con los otros niveles</strong>:
+<ul>
+<li>Se construye sobre IaaS, utilizando la infraestructura subyacente para ofrecer un entorno de desarrollo listo para usar.</li>
+<li>Sirve como base para SaaS, ya que las aplicaciones ofrecidas como SaaS suelen desarrollarse y gestionarse en plataformas PaaS.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Software como Servicio (SaaS) - La cima</strong></p>
+<ul>
+<li><strong>Función</strong>: Proporciona aplicaciones listas para usar a través de internet, como herramientas de productividad, gestión empresarial o colaboración.</li>
+<li><strong>Relación con los otros niveles</strong>:
+<ul>
+<li>Depende de PaaS para el desarrollo y mantenimiento de las aplicaciones.</li>
+<li>Indirectamente, depende de IaaS para la infraestructura que soporta tanto las plataformas como las aplicaciones.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="relación-general">Relación General </h4>
+<ul>
+<li>
+<p><strong>Interdependencia</strong>: Cada nivel depende del anterior para funcionar. IaaS proporciona la infraestructura, PaaS utiliza esa infraestructura para ofrecer un entorno de desarrollo, y SaaS utiliza las plataformas para ofrecer aplicaciones listas para el usuario final.</p>
+</li>
+<li>
+<p><strong>Abstracción creciente</strong>: A medida que subimos en la jerarquía, el nivel de abstracción aumenta. Los usuarios finales de SaaS no necesitan preocuparse por la infraestructura ni las plataformas subyacentes, mientras que los usuarios de IaaS tienen un control más granular pero también más responsabilidades.</p>
+</li>
+<li>
+<p><strong>Control vs. Simplicidad</strong>:</p>
+<ul>
+<li>En IaaS, el usuario tiene más control sobre los recursos, pero también más tareas de gestión.</li>
+<li>En SaaS, el usuario tiene menos control, pero la simplicidad y facilidad de uso son mayores.</li>
+</ul>
+</li>
+</ul>
+<p>El siguiente diagrama ilustra la relación jerárquica entre los niveles de servicio en la nube, las prestaciones y los perfiles de los usuario habituales de estos.</p>
+<p><img src="./.img/3.14.svg" alt="Img 3.14"></p>
+<h3 id="responsabilidad-de-gestión-de-recursos-en-la-nube">Responsabilidad de Gestión de Recursos en la Nube </h3>
+<p>La responsabilidad de gestionar los recursos en la nube varía según el nivel de servicio (IaaS, PaaS, SaaS). A continuación, se detalla cómo se distribuyen las responsabilidades entre el proveedor y el usuario en cada modelo:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Nivel de Servicio</strong></th>
+<th style="text-align:left"><strong>Responsabilidad del Proveedor</strong></th>
+<th style="text-align:left"><strong>Responsabilidad del Usuario</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Infraestructura como Servicio (IaaS)</strong></td>
+<td style="text-align:left">Infraestructura física, virtualización, redes, almacenamiento.</td>
+<td style="text-align:left">Sistema operativo, middleware, aplicaciones, datos.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Plataforma como Servicio (PaaS)</strong></td>
+<td style="text-align:left">Infraestructura, sistema operativo, middleware, herramientas de desarrollo, bases de datos.</td>
+<td style="text-align:left">Aplicaciones, datos.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Software como Servicio (SaaS)</strong></td>
+<td style="text-align:left">Infraestructura, sistema operativo, middleware, aplicaciones, mantenimiento, actualizaciones, seguridad.</td>
+<td style="text-align:left">Uso de la aplicación, configuración básica, gestión de datos propios.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="./.img/3.15.svg" alt="Img 3.15" width="100%" height="100%"></p>
+<h4 id="características-8">Características </h4>
+<ul>
+<li><strong>Control total</strong>: La organización tiene pleno control sobre la infraestructura y los datos.</li>
+<li><strong>Cumplimiento normativo</strong>: Ideal para sectores con estrictos requisitos de seguridad y privacidad.</li>
+<li><strong>Personalización</strong>: Permite adaptar los sistemas a las necesidades específicas del negocio.</li>
+</ul>
+<h4 id="limitaciones-4">Limitaciones </h4>
+<ul>
+<li><strong>Costes elevados</strong>: Requiere inversiones iniciales significativas en hardware, software y personal especializado.</li>
+<li><strong>Escalabilidad limitada</strong>: La expansión de recursos puede ser lenta y costosa.</li>
+<li><strong>Mantenimiento complejo</strong>: La organización debe gestionar actualizaciones, soporte técnico y seguridad.</li>
+</ul>
+<h4 id="comparativa-con-la-nube">Comparativa con la Nube </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Aspecto</strong></th>
+<th style="text-align:left"><strong>On-Premises</strong></th>
+<th style="text-align:left"><strong>Computación en la Nube</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Inversión inicial</strong></td>
+<td style="text-align:left">Alta (hardware y software propios).</td>
+<td style="text-align:left">Baja (modelo de pago por uso).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Escalabilidad</strong></td>
+<td style="text-align:left">Limitada y lenta.</td>
+<td style="text-align:left">Dinámica y rápida.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mantenimiento</strong></td>
+<td style="text-align:left">A cargo de la organización.</td>
+<td style="text-align:left">A cargo del proveedor.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Acceso remoto</strong></td>
+<td style="text-align:left">Limitado a la infraestructura interna.</td>
+<td style="text-align:left">Disponible desde cualquier lugar.</td>
+</tr>
+</tbody>
+</table>
+<p>Anteriormente a la aparición de las tecnologías de computación en la nube tanto el hardware como el software tenía que ser gestionado por cada organización. Este modelo de servicio de computación se denomina On-Premises.<br>
+El modelo On-Premises sigue siendo relevante en sectores donde la seguridad, la privacidad y el control total son prioritarios, aunque la computación en la nube ha ganado terreno por su flexibilidad y eficiencia.</p>
+<blockquote>
+<p>📌 El modelo <strong>On-Premises</strong> se refiere a la gestión y operación de infraestructura tecnológica dentro de las instalaciones físicas de una organización. En este enfoque, la empresa es responsable de adquirir, instalar, configurar y mantener tanto el hardware como el software necesarios para sus operaciones.</p>
+</blockquote>
+<h2 id="uso-de-los-diferentes-modelos-de-nube">Uso de los Diferentes Modelos de Nube </h2>
+<p>Los modelos de nube (IaaS, PaaS, SaaS) ofrecen soluciones adaptadas a diferentes necesidades empresariales, desde la gestión de infraestructura hasta el desarrollo y uso de aplicaciones. Cada modelo tiene aplicaciones específicas que permiten a las organizaciones optimizar recursos, reducir costes y mejorar la eficiencia operativa. A continuación, se describen ejemplos prácticos de cómo estos modelos pueden ser utilizados en distintos sectores.</p>
+<h3 id="aplicaciones-de-los-modelos-de-nube">Aplicaciones de los Modelos de Nube </h3>
+<h4 id="infraestructura-como-servicio-iaas-1">Infraestructura como Servicio (IaaS) </h4>
+<p>Permite gestionar infraestructura sin necesidad de invertir en hardware propio.</p>
+<ul>
+<li><strong>Aplicaciones</strong>:
+<ul>
+<li><strong>Servicios de computación</strong>: Arquitectura e ingeniería (software de diseño 3D).</li>
+<li><strong>Almacenamiento</strong>: Sanidad (historiales médicos electrónicos).</li>
+<li><strong>Copia de seguridad</strong>: Financiero (protección de datos críticos).</li>
+<li><strong>Redes</strong>: Educativo (plataformas de aprendizaje en línea).</li>
+</ul>
+</li>
+</ul>
+<p><img src="./.img/3.16.png" alt="Img 3.16" width="100%" height="100%"></p>
+<h4 id="plataforma-como-servicio-paas-1">Plataforma como Servicio (PaaS) </h4>
+<p>Facilita el desarrollo, despliegue y mantenimiento de aplicaciones.</p>
+<ul>
+<li><strong>Aplicaciones</strong>:
+<ul>
+<li><strong>Gestión del ciclo de vida de aplicaciones</strong>: Comercio electrónico (actualización de plataformas).</li>
+<li><strong>Portales de aplicaciones</strong>: Turístico (portales personalizados).</li>
+<li><strong>Plataformas de desarrollo sin servidor</strong>: Financiero (procesamiento de pagos en línea).</li>
+</ul>
+</li>
+</ul>
+<p><img src="./.img/3.17.png" alt="Img 3.17" width="100%" height="100%"></p>
+<h4 id="software-como-servicio-saas-1">Software como Servicio (SaaS) </h4>
+<p>Permite acceder a aplicaciones listas para usar a través de la nube.</p>
+<ul>
+<li><strong>Aplicaciones</strong>:
+<ul>
+<li><strong>Comunicación y colaboración</strong>: Educativo (Microsoft Teams, Google Workspace).</li>
+<li><strong>Paquetes de software de oficina</strong>: Microsoft 365, Google Workspace.</li>
+<li><strong>Gestión empresarial</strong>: Industrial (SAP Business One), marketing (HubSpot), comercio electrónico (Mailchimp), gestión de proyectos (Microsoft Project, Trello).</li>
+</ul>
+</li>
+</ul>
+<p><img src="./.img/3.18.png" alt="Img 3.18" width="100%" height="100%"></p>
+<h2 id="modelos-de-computación-complementarios-a-la-nube-tradicional">Modelos de Computación Complementarios a la Nube Tradicional </h2>
+<p>Los modelos complementarios a la nube tradicional, como Edge Computing, Fog Computing y Mist Computing, surgen para abordar desafíos específicos relacionados con la latencia, la conectividad y el procesamiento de datos en tiempo real. Estos enfoques permiten procesar datos más cerca de su origen, optimizando el rendimiento y reduciendo la dependencia de la nube centralizada.</p>
+<h3 id="modelos-existentes">Modelos existentes </h3>
+<h4 id="edge-computing">Edge Computing </h4>
+<p>El Edge Computing procesa los datos cerca del dispositivo que los genera, reduciendo la latencia y la carga de red. Este modelo es ideal para aplicaciones que requieren decisiones en tiempo real sin depender de una conexión constante a la nube.</p>
+<ul>
+<li>
+<p><strong>Características</strong>:</p>
+<ul>
+<li>Procesamiento local de datos.</li>
+<li>Reducción de latencia.</li>
+<li>Independencia de la conectividad constante.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejemplos</strong>:</p>
+<ul>
+<li>Una fábrica con sensores de temperatura que analizan datos localmente para actuar ante sobrecalentamiento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Casos de uso</strong>:</p>
+<ul>
+<li>Automoción.</li>
+<li>Industria.</li>
+<li>Salud.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./.img/3.19.png" alt="Img 3.19" width="100%" height="100%"></p>
+<h4 id="fog-computing">Fog Computing </h4>
+<p>El Fog Computing actúa como un puente entre el Edge Computing y la nube, procesando datos en nodos intermedios, como routers o servidores locales, antes de enviarlos a la nube. Este enfoque es útil para sistemas que requieren análisis preliminares antes de un procesamiento más profundo en la nube.</p>
+<ul>
+<li>
+<p><strong>Características</strong>:</p>
+<ul>
+<li>Procesamiento en nodos intermedios.</li>
+<li>Reducción de la carga en la nube.</li>
+<li>Mayor flexibilidad en la gestión de datos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Un sistema de control de tráfico que analiza imágenes localmente y solo envía información relevante a la nube.</li>
+</ul>
+</li>
+<li>
+<p><strong>Casos de uso</strong>:</p>
+<ul>
+<li>Ciudades inteligentes.</li>
+<li>Redes industriales.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./.img/3.20.png" alt="Img 3.20" width="100%" height="100%"></p>
+<h4 id="mist-computing">Mist Computing </h4>
+<p>El Mist Computing lleva el procesamiento aún más cerca del origen del dato, dentro de los dispositivos inteligentes. Este modelo es ideal para entornos donde la privacidad y la inmediatez son prioritarias.</p>
+<ul>
+<li>
+<p><strong>Características</strong>:</p>
+<ul>
+<li>Procesamiento dentro de dispositivos inteligentes.</li>
+<li>Alta prioridad en la privacidad de datos.</li>
+<li>Reducción de la dependencia de la nube.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejemplos</strong>:</p>
+<ul>
+<li>Un reloj inteligente que analiza la frecuencia cardíaca y solo envía alertas importantes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Casos de uso</strong>:</p>
+<ul>
+<li>Salud.</li>
+<li>Internet de las cosas (IoT).</li>
+<li>Entornos con alta prioridad de privacidad.</li>
+</ul>
+</li>
+</ul>
+<h3 id="comparativa-de-modelos">Comparativa de Modelos </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Modelo</th>
+<th style="text-align:left">Procesamiento</th>
+<th style="text-align:left">Latencia</th>
+<th style="text-align:left">Conectividad</th>
+<th style="text-align:left">Casos de Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Edge Computing</strong></td>
+<td style="text-align:left">Cerca del dispositivo</td>
+<td style="text-align:left">Muy baja</td>
+<td style="text-align:left">No siempre necesaria</td>
+<td style="text-align:left">Automoción, industria, salud</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Fog Computing</strong></td>
+<td style="text-align:left">Nodos intermedios</td>
+<td style="text-align:left">Baja</td>
+<td style="text-align:left">Parcialmente necesaria</td>
+<td style="text-align:left">Ciudades inteligentes, industria</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mist Computing</strong></td>
+<td style="text-align:left">Dentro del dispositivo</td>
+<td style="text-align:left">Muy baja</td>
+<td style="text-align:left">No necesaria</td>
+<td style="text-align:left">Salud, IoT, privacidad</td>
+</tr>
+</tbody>
+</table>
+<h2 id="impacto-de-la-computación-en-la-nube-en-la-rentabilidad-empresarial">Impacto de la Computación en la Nube en la Rentabilidad Empresarial </h2>
+<p>La computación en la nube ha revolucionado la forma en que las empresas gestionan sus recursos tecnológicos, ofreciendo un modelo más eficiente y flexible. Este apartado analiza cómo la adopción de la nube puede influir positivamente en la rentabilidad empresarial, destacando los beneficios económicos y estratégicos que aporta.</p>
+<h3 id="impacto-financiero-de-la-computación-en-la-nube">Impacto Financiero de la Computación en la Nube </h3>
+<ol>
+<li>
+<p><strong>Modelo de costes eficiente</strong></p>
+<ul>
+<li>Eliminación de inversiones iniciales.</li>
+<li>Pago por consumo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reducción de costes operativos</strong></p>
+<ul>
+<li>Externalización de infraestructura.</li>
+<li>Menor gasto en mantenimiento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mejora de la rentabilidad a largo plazo</strong></p>
+<ul>
+<li>Eficiencia operativa.</li>
+<li>Acceso a tecnología avanzada.</li>
+</ul>
+</li>
+<li>
+<p><strong>Escalabilidad y flexibilidad</strong></p>
+<ul>
+<li>Gestión de picos de carga.</li>
+<li>Adaptación de costes a ingresos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimización de recursos</strong></p>
+<ul>
+<li>Implementación rápida de proyectos.</li>
+<li>Enfoque en la innovación y el core business.</li>
+</ul>
+</li>
+</ol>
+<p><img src="./.img/3.21.png" alt="Img 3.21" width="100%" height="100%"></p>
+<h2 id="ideas-clave">Ideas Clave </h2>
+<div class="caso_estudio">
+<p>🎓 <strong>Ideas clave</strong></p>
+<ul>
+<li>La computación en la nube ha transformado la gestión de la infraestructura tecnológica.</li>
+<li>Existen diversos modelos de nube (IaaS, PaaS, SaaS, XaaS) para diferentes usos y necesidades.</li>
+<li>Tecnologías como Edge, Fog y Mist Computing complementan la nube para el procesamiento de datos cercano al origen.</li>
+<li>El impacto financiero de la nube es significativo, permitiendo reducir costes y mejorar la rentabilidad.</li>
+<li>La clave es combinar la nube con otros modelos según las necesidades específicas de cada negocio.</li>
+</ul>
+</div> <!-- fin caso de estudio -->
+<h2 id="conclusiones">Conclusiones </h2>
+<p>La computación en la nube, en sus diferentes modelos de implementación y servicio, representa una herramienta fundamental para la transformación digital de las empresas.<br>
+Su capacidad para optimizar costes, mejorar la eficiencia, facilitar la escalabilidad y permitir el acceso a tecnología avanzada sin grandes inversiones iniciales la convierte en un pilar estratégico.<br>
+Además, la aparición de modelos complementarios como el Edge, Fog y Mist Computing amplía las posibilidades para abordar necesidades específicas de latencia, procesamiento local y eficiencia en la gestión de datos.<br>
+La elección del modelo de nube y las tecnologías complementarias adecuadas dependerá de las necesidades particulares de cada organización y su sector productivo.<br>
+El objetivo principal, tal como se destaca en la fuente, es comprender el potencial de estas tecnologías para transformar digitalmente los escenarios de negocio. En el siguiente infograma se sintetizan las conclusiones.</p>
+<p><img src="./.img/3.22.png" alt="Img 3.22" width="100%" height="100%"></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
